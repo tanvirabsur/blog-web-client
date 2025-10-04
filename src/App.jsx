@@ -1,13 +1,18 @@
 import { Outlet } from 'react-router'
 import Sidebar from './components/Sidebar'
+import Aside from './components/Aside'
 
 function App() {
 
 
   return (
     <>
-    <Sidebar/>
-      <Outlet/>
+      <div className='flex flex-col lg:flex-row gap-2'>
+        <Aside />
+        <div>
+          <Outlet />
+        </div>
+      </div>
     </>
   )
 }

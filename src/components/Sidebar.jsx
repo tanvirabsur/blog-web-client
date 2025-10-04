@@ -52,10 +52,7 @@ const Sidebar = () => {
       )}
 
       {/* Main Content Placeholder */}
-      <main className="flex-1 p-6 md:ml-64">
-        <h2 className="text-2xl font-semibold mb-4">Main Content Area</h2>
-        <p className="text-gray-400">Here your blog cards or content will appear.</p>
-      </main>
+     
     </div>
   );
 };

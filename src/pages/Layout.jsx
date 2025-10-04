@@ -1,10 +1,9 @@
 import React from 'react';
+import Aside from '../components/Aside';
 
 const Layout = () => {
     return (
-        <div>
-            
-        </div>
+       <></>
     );
 };
 
