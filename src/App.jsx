@@ -1,5 +1,4 @@
 import { Outlet } from 'react-router'
-import Sidebar from './components/Sidebar'
 import Aside from './components/Aside'
 
 function App() {

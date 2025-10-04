@@ -8,9 +8,9 @@ const Aside = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <>
-            <div className="flex md:hidden items-center justify-between border-b border-gray-800">
+            <div className="flex md:hidden items-center justify-between border-b p-3 border-gray-800">
                 <h1 className="text-lg font-semibold">Resources and insights</h1>
-                <button onClick={() => setIsOpen(!isOpen)} className=" focus:outline-none">
+                <button onClick={() => setIsOpen(!isOpen)} className=" focus:outline-none cursor-pointer">
                     {isOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
             </div>
