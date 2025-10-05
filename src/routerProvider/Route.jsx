@@ -3,10 +3,14 @@ import { createBrowserRouter } from 'react-router';
 import App from '../App';
 import Home from '../pages/Home';
 import BlogDetails from '../pages/BlogDetailes';
+import AdminLogin from '../pages/AdminLogin';
+import AdminLayout from '../pages/AdminLayout';
+import BlogPublishForm from '../pages/BlogPublishForm';
+import AdminHome from '../pages/AdminHome';
 
 const Route = createBrowserRouter([
     {
-        path:'/',
+        path: '/',
         Component: App,
         children: [
             {
@@ -18,7 +22,29 @@ const Route = createBrowserRouter([
                 Component: BlogDetails
             }
         ]
-    }
+    },
+
+    {
+        path: '/admin-panal',
+        Component: AdminLayout,
+        children: [
+            {
+                index: true,
+                Component: AdminHome
+            },
+            {
+                path: 'upload-blog',
+                Component: BlogPublishForm
+            }
+        ]
+
+    },
+    {
+        path: '/admin-login',
+        Component: AdminLogin
+    },
+
+
 ])
 
 export default Route;
