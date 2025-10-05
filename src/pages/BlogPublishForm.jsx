@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Upload, X, Bold, Italic, Underline, AlignLeft, AlignCenter, AlignRight, List, ListOrdered, Link, Image, Code } from 'lucide-react';
+import { Upload, X, Bold, Italic, Underline, AlignLeft, AlignCenter, AlignRight, List, ListOrdered, Link, Image, Code, CirclePlus, PencilLine, Shell, Settings, Trash2, ArrowLeft } from 'lucide-react';
+import { NavLink } from 'react-router';
 
 export default function BlogPublishForm() {
   const [title, setTitle] = useState('');
@@ -48,9 +49,9 @@ export default function BlogPublishForm() {
   ];
 
   const modelActions = [
-    { icon: '✏️', label: 'Edit The Model', color: 'bg-purple-100 border-purple-300' },
-    { icon: '⚙️', label: 'Configure The Line', color: 'bg-blue-100 border-blue-300' },
-    { icon: '🗑️', label: 'Delete The Entry', color: 'bg-orange-100 border-orange-300' }
+    { icon: <PencilLine size={20} />, label: 'Edit The Model', color: 'bg-purple-100 border-purple-300' },
+    { icon: <Settings size={20}/>, label: 'Configure The Line', color: 'bg-blue-100 border-blue-300' },
+    { icon: <Trash2 size={20} />, label: 'Delete The Entry', color: 'bg-orange-100 border-orange-300' }
   ];
 
   return (
@@ -58,14 +59,15 @@ export default function BlogPublishForm() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-6">
-          <button className="text-purple-600 mb-2 flex items-center gap-1">
-            ← Back
-          </button>
+          <NavLink className="text-purple-600 mb-2 flex items-center gap-1">
+            <ArrowLeft size={20} /> Back
+          </NavLink>
+      
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-semibold">Title - 3077270958</h1>
             <div className="flex gap-2">
               <button className="px-4 py-2 border border-gray-300 rounded bg-white text-gray-700 flex items-center gap-2">
-                👁️ Publish
+                <CirclePlus size={20}/> Publish
               </button>
               <button className="px-4 py-2 bg-green-500 text-white rounded">
                 Save
@@ -263,7 +265,7 @@ export default function BlogPublishForm() {
           <div className="space-y-4">
             {/* Versions */}
             <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h3 className="font-medium mb-3">📝 Editing Draft Version</h3>
+              <h3 className="font-medium mb-3"><Shell /> Editing Draft Version</h3>
               <div className="space-y-2 text-sm">
                 {versions.map((version) => (
                   <div key={version.id} className="flex justify-between py-1">

@@ -7,6 +7,7 @@ import AdminLogin from '../pages/AdminLogin';
 import AdminLayout from '../pages/AdminLayout';
 import BlogPublishForm from '../pages/BlogPublishForm';
 import AdminHome from '../pages/AdminHome';
+import BlogDetailPage from '../pages/DetailesPage';
 
 const Route = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const Route = createBrowserRouter([
             {
                 path: '/blog/:id',
                 Component: BlogDetails
+            },
+            {
+                path: '/dev',
+                Component: BlogDetailPage
             }
         ]
     },
