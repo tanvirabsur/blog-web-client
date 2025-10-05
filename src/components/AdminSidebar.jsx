@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, Users, Settings, BarChart, LogOut, Menu } from 'lucide-react';
+import { Home, Settings, BarChart, LogOut, Menu, FileUp } from 'lucide-react';
 
 const AdminSidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -7,8 +7,8 @@ const AdminSidebar = () => {
   const toggleSidebar = () => setIsOpen(!isOpen);
 
   const menuItems = [
-    { id: 1, name: 'Dashboard', icon: <Home size={20} />, link: '#' },
-    { id: 2, name: 'Users', icon: <Users size={20} />, link: '#' },
+    { id: 1, name: 'Dashboard', icon: <Home size={20} />, link: '/admin-panal' },
+    { id: 2, name: 'Upload', icon: <FileUp />, link: '/admin-panal/upload-blog' },
     { id: 3, name: 'Analytics', icon: <BarChart size={20} />, link: '#' },
     { id: 4, name: 'Settings', icon: <Settings size={20} />, link: '#' },
   ];
